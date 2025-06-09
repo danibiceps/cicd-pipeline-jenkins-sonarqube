@@ -2,6 +2,12 @@ pipeline {
   agent any
 
   stages {
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/danibiceps/cicd-pipeline-jenkins-sonarqube.git'
+      }
+    }
+
     stage('Build Docker Image') {
       steps {
         script {
@@ -31,7 +37,3 @@ pipeline {
         script {
           sh 'docker run -d -p 5000:5000 myapp:latest'
         }
-      }
-    }
-  }
-}
