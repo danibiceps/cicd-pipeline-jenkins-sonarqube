@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/yourusername/cicd-pipeline-jenkins-sonarqube.git'
+        git 'https://github.com/danibiceps/cicd-pipeline-jenkins-sonarqube.git'
       }
     }
 
